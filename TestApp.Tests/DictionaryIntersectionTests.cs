@@ -18,7 +18,7 @@ public class DictionaryIntersectionTests
         Dictionary<string, int> intersection = DictionaryIntersection.Intersect(dictionary1, dictionary2);
 
         // Assert
-        Assert.That(intersection, Is.Empty);
+        Assert.That(intersection, Is.EqualTo(new Dictionary<string, int>()));
     }
 
     [Test]
@@ -36,7 +36,7 @@ public class DictionaryIntersectionTests
         Dictionary<string, int> intersection = DictionaryIntersection.Intersect(dictionary1, dictionary2);
 
         // Assert
-        Assert.That(intersection, Is.Empty);
+        Assert.That(intersection, Is.EqualTo(new Dictionary<string, int>()));
     }
 
     [Test]
@@ -45,21 +45,21 @@ public class DictionaryIntersectionTests
         // Arrange
         Dictionary<string, int> dictionary1 = new Dictionary<string, int>()
         {
-            {"five", 5 },
-            {"ten", 10 }
+            { "five", 5 },
+            { "ten", 10 }
 
         };
         Dictionary<string, int> dictionary2 = new Dictionary<string, int>()
         {
-            {"one", 1 },
-            {"two", 2 }
+            { "one", 1 },
+            { "two", 2 }
         };
 
         // Act
         Dictionary<string, int> intersection = DictionaryIntersection.Intersect(dictionary1, dictionary2);
 
         // Assert
-        Assert.That(intersection, Is.Empty);
+        Assert.That(intersection, Is.EqualTo(new Dictionary<string, int>()));
     }
 
     [Test]
@@ -68,21 +68,21 @@ public class DictionaryIntersectionTests
         // Arrange
         Dictionary<string, int> dictionary1 = new Dictionary<string, int>()
         {
-            {"banana", 5 },
-            {"lemon", 10 },
-            {"kiwi", 3}
+            { "banana", 5 },
+            { "lemon", 10 },
+            { "kiwi", 3}
 
         };
         Dictionary<string, int> dictionary2 = new Dictionary<string, int>()
         {
-            {"banana", 5 },
-            {"lemon", 2 },
-            {"kiwi", 3 }
+            { "banana", 5 },
+            { "lemon", 2 },
+            { "kiwi", 3 }
         };
         Dictionary<string, int> expected = new Dictionary<string, int>()
         {
-            {"banana", 5 },
-            {"kiwi", 3 }
+            { "banana", 5 },
+            { "kiwi", 3 }
         };
 
         // Act
@@ -98,20 +98,20 @@ public class DictionaryIntersectionTests
         // Arrange
         Dictionary<string, int> dictionary1 = new Dictionary<string, int>()
         {
-            {"banana", 5 },
-            {"lemon", 10 }
+            { "banana", 5 },
+            { "lemon", 10 }
 
         };
         Dictionary<string, int> dictionary2 = new Dictionary<string, int>()
         {
-            {"banana", 1 },
-            {"lemon", 2 }
+            { "banana", 1 },
+            { "lemon", 2 }
         };
 
         // Act
         Dictionary<string, int> intersection = DictionaryIntersection.Intersect(dictionary1, dictionary2);
 
         // Assert
-        Assert.That(intersection, Is.Empty);
+        Assert.That(intersection, Is.EqualTo(new Dictionary<string, int>()));
     }
 }
